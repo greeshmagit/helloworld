@@ -8,7 +8,7 @@ pipeline{
     }
     stage("docker build"){
       steps{
-               sh "docker build -t sh  pgreeshma/welpython:v1 -f helloworld/Dockerfile .
+               sh "docker build -t sh  pgreeshma/welpython:v1 -f helloworld .
       }
     }
   }
