@@ -7,4 +7,4 @@ CMD ["python","./helloworld.py"]
 
 FROM tomcat:9
 LABEL app=pythontest
-COPY app/helloworld.py /usr/local/tomcat/webapps/helloworld.py
+COPY . /usr/local/tomcat/webapps/helloworld.py
