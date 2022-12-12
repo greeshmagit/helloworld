@@ -5,6 +5,6 @@ COPY helloworld.py ./
 COPY . .
 CMD ["python","./helloworld.py"]
 
-#FROM tomcat:9
-#LABEL app=pythontest
-#COPY helloworld/target/helloworld.py /usr/local/tomcat/webapps/helloworld.py
+FROM tomcat:9
+LABEL app=pythontest
+COPY helloworld/helloworld.py /usr/local/tomcat/webapps/helloworld.py
