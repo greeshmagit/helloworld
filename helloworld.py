@@ -9,5 +9,5 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run('13.232.89.101', 8081)
+    app.run()
 
