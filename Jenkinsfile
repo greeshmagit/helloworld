@@ -21,7 +21,7 @@ pipeline{
     }
     stage("docker deploy to tomcat"){
       steps{
-            sshagent(['Docker_creds']) {
+            sshagent(['tomcat']) {
                          //sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rm -f tomcat"
                          sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker run -d -p 8081:8080 --name tomcat pgreeshma/welpython:v1"
              }
