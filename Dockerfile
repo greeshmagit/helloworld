@@ -1,7 +1,7 @@
 FROM python:alpine3.10
 WORKDIR /usr/src/app
 COPY helloworld.py ./
-RUN pip install --no-cache-dir -r requirement.txt
+RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 CMD ["python","./helloworld.py"]
 
