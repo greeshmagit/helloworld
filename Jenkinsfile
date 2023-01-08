@@ -24,7 +24,7 @@ pipeline{
             sshagent(['tomcat']) {
                          sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rm -f tomcat"
                          sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rmi -f pgreeshma/welpython"
-                         sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker image prune -a"
+                         sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker image prune -a -f"
                           /*sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rmi -f \$(docker image -q -f dangling=True)"
                          /*sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rmi -f ${docker image prune -a}"*/
                         
