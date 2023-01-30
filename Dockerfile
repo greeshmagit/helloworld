@@ -8,6 +8,7 @@ CMD ["python","./helloworld.py"]
 
 FROM tomcat:9 as runtime
 LABEL app=pythontest
+WORKDIR /usr/local/tomcat/webapps
 COPY --from=builder . /usr/local/tomcat/webapps
 
 
