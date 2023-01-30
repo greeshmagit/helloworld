@@ -7,7 +7,7 @@ def index():
     return "Welcome to python"
 
 
-app.run()
+app.run(host="0.0.0.0", port=int("8081"), debug=True)
 
 
 
