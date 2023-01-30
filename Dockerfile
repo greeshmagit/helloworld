@@ -4,9 +4,10 @@ COPY helloworld.py ./
 COPY requirements.txt ./
 RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
 COPY . .
+CMD ["python","./helloworld.py"]
 
 FROM tomcat:9 as runtime
-COPY --from=builder . /usr/local/tomcat/webapps
+COPY --from=builder ./helloworld.py /usr/local/tomcat/webapps
 
 
  
