@@ -11,11 +11,11 @@ COPY --from=builder . /usr/local/tomcat/webapps
 
 
  /*From openjdk:8-jdk-alpine as builder
-   RUN mkdir -p /webtest
-   COPY . /webtest
-   WORKDIR /webtest
-   RUN . /mvn clean package
+   //RUN mkdir -p /webtest
+   //COPY . /webtest
+  // WORKDIR /webtest
+   //RUN . /mvn clean package
    
-   From tomcat:alpine as runtime
-   COPY --from=builder /webtest/target/webtest.war /tomcat/webapps/webtest.war
-   EXPOSE 8080*/
+   //From tomcat:alpine as runtime
+   //COPY --from=builder /webtest/target/webtest.war /tomcat/webapps/webtest.war
+   //EXPOSE 8080*/
