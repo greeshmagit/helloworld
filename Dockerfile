@@ -1,14 +1,15 @@
 FROM python:alpine3.10 as builder
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY helloworld.py ./
 COPY requirements.txt ./
 RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
-CMD ["python3","./helloworld.py"]
+ENTRYPOINT "python3"
+CMD ["./helloworld.py"]
 COPY . .
 
 
-#FROM tomcat:9 as runtime
-#COPY --from=builder . /usr/local/tomcat/webapps
+FROM ubuntu:22.04 as runtime
+COPY --from=builder . /opt/helloworld
 
 
  
