@@ -4,3 +4,4 @@ COPY . /app
 RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
 ENTRYPOINT ["python3"]
 CMD ["helloworld.py"]
+EXPOSE 5000
