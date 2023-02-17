@@ -7,8 +7,8 @@ CMD ["python3","./helloworld.py"]
 COPY . .
 
 
-FROM tomcat:9 as runtime
-COPY --from=builder . /usr/local/tomcat/webapps
+#FROM tomcat:9 as runtime
+#COPY --from=builder . /usr/local/tomcat/webapps
 
 
  
