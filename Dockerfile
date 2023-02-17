@@ -1,4 +1,4 @@
-FROM python:alpine3.10 as builder
+FROM python:alpine3.10 
 WORKDIR /app
 COPY helloworld.py /app
 COPY requirements.txt /app
@@ -7,8 +7,8 @@ ENTRYPOINT ["python3"]
 CMD ["./app/helloworld.py"]
 
 
-FROM ubuntu:22.04 as runtime
-COPY --from=builder /app/helloworld.py /opt/helloworld
+#FROM ubuntu:22.04 as runtime
+#COPY --from=builder /app/helloworld.py /opt/helloworld
 
 
 #FROM python:alpine3.11 as builder 
