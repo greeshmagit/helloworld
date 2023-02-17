@@ -6,8 +6,8 @@ RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
 COPY . .
 CMD ["python","./helloworld.py"]
 
-FROM tomcat:9 as runtime
-COPY --from=builder python /usr/local/tomcat/webapps
+#FROM tomcat:9 as runtime
+#COPY --from=builder python /usr/local/tomcat/webapps
 
 
  
