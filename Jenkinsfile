@@ -28,7 +28,7 @@ pipeline{
                           /*sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rmi -f \$(docker image -q -f dangling=True)"
                          /*sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rmi -f ${docker image prune -a}"*/
                         
-                         sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker run -d -p 8081:8080 --name tomcat pgreeshma/welpython:v1"
+                         sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker run -d -p 8081:5000 --name helloworld pgreeshma/welpython:v1"
              }
                
          }
