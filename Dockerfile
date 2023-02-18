@@ -1,7 +1,7 @@
-FROM python:alpine3.10 
+FROM python:alpine3.9
 WORKDIR /app
 COPY . /app
-RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
+RUN pip3 install --upgrade pip --no-cache-dir -r requirements.txt
 ENTRYPOINT ["python3"]
 CMD ["helloworld.py"]
 EXPOSE 5000
