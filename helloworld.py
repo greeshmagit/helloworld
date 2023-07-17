@@ -3,12 +3,8 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
+def hello_world():
     return "Welcome to python"
-
-
-app.run(host="0.0.0.0", port=int("8081"), debug=True)
-
 
 
 
