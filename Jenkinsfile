@@ -43,32 +43,8 @@ pipeline {
   }
 }
 
-/*pipeline {
-  
-  agent any
-  stages{
-    
-    stage("Build Image"){
-      app = docker.build("pgreeshma/welpython")
-    }
-    stage("Test Image"){
-      app.inside{
-        sh 'echo "Test Passed"'
-      }
-    }
-    stage("Push Image"){
-      docker.withRegistry('https://registry.hub.docker.com', 'dockerhub'){
-        app.push("${env.BUILD_NUMBER}")
-      }
-    }
-    stage("triger Manifestupdate"){
-      echo "triggering updatemanifestjob"
-      build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
-    }
- }
-}
-         
-pipeline{
+        
+/*pipeline{
   agent any
   stages{
     stage("git checkout"){
