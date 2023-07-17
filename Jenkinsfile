@@ -13,7 +13,7 @@ pipeline {
     stage("Test Image") {
       steps {
         script {
-             app.inside {
+             docker.build("pgreeshma/welpython1").inside {
                    sh 'echo "Test Passed"'
           }
         }
