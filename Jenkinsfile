@@ -1,6 +1,6 @@
-node{
+node {
   def app
-  agent any
+  
   stages{
     stage("Build Image"){
       app = docker.build("pgreeshma/welpython")
