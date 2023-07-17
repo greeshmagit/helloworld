@@ -14,7 +14,7 @@ pipeline{
         app.push("${env.BUILD_NUMBER}")
       }
     }
-    stage{"triger Manifestupdate"){
+    stage("triger Manifestupdate"){
       echo "triggering updatemanifestjob"
       build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
     }
