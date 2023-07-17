@@ -5,8 +5,7 @@ pipeline {
     stage("Build Image") {
       steps {
         script {
-            def app 
-            app = docker.build("pgreeshma/welpython1")
+            def app = docker.build("pgreeshma/welpython1")
         }
       }
     }
@@ -25,7 +24,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-            app.push("${env.BUILD_NUMBER}")
+            docker.build("pgreeshma/welpython1").push("${env.BUILD_NUMBER}")
           }
         }
       }
