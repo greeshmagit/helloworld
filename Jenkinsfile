@@ -5,7 +5,8 @@ pipeline {
     stage("Build Image") {
       steps {
         script {
-            def app = docker.build("pgreeshma/welpython1")
+            def app 
+            app = docker.build("pgreeshma/welpython1")
         }
       }
     }
