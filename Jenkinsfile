@@ -5,6 +5,7 @@ pipeline {
     stage("Build Image") {
       steps {
         script {
+          docker image prune
           def app = docker.build("pgreeshma/welpython")
         }
       }
